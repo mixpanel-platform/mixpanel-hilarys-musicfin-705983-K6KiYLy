@@ -21,10 +21,10 @@
       var propSelect  = $('#propSelect').MPPropertySelect();
       var to = new Date(); 
       var from = new Date(); 
-      from.setDate(from.getDate() - 7);
-      console.log("this is the date" + from)
+      //from.setDate(from.getDate() - 7);
+      //console.log("this is the date" + from)
       var dateSelect  = $('#dateSelect').MPDatepicker();
-      $('#dateSelect').val([{from: from, to: to}]);
+      //$('#dateSelect').val([{from: from, to: to}]);
       console.log("dateSelect: " + $('#dateSelect').val().from);
       console.log("from: " + dateSelect.MPDatepicker('value').from + " to: " + dateSelect.MPDatepicker('value').to);
       var eventGraph  = $('#graph').MPChart({chartType: 'line'});
