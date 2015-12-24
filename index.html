@@ -24,6 +24,9 @@
       from.setDate(from.getDate() - 7);
       console.log("this is the from date" + from)
       var dateSelect  = $('#dateSelect').MPDatepicker();
+      dateSelect.on('change', function(e, dates) {
+        alert('From: ' + dates.from + '\nTo: ' + dates.to);
+      });
       dateSelect.val({from: from, to: to});
       console.log("dateSelect: " + dateSelect.val().from);
       console.log("from: " + dateSelect.val().from + "to" + dateSelect.val().to);
