@@ -24,7 +24,7 @@
       from = from - 7;
       console.log("this is the from date" + from)
       var dateSelect  = $('#dateSelect').MPDatepicker();
-      //$('#dateSelect').val([{from: from, to: to}]);
+      $('#dateSelect').val([{from: from, to: to}]);
       console.log("dateSelect: " + $('#dateSelect').val().from);
       console.log("from: " + dateSelect.MPDatepicker('value').from + " to: " + dateSelect.MPDatepicker('value').to);
       var eventGraph  = $('#graph').MPChart({chartType: 'line'});
