@@ -19,7 +19,13 @@
     <script>
       var eventSelect = $('#eventSelect').MPEventSelect();
       var propSelect  = $('#propSelect').MPPropertySelect();
+      var to = new Date(); 
+      var from = new Date(); 
+      from.setDate(from.getDate() - 7); 
       var dateSelect  = $('#dateSelect').MPDatepicker();
+      $('#dateSelect').val([{from: from, to: to}]);
+      console.log("dateSelect: " + $('#dateSelect').val().from);
+      console.log("from: " + dateSelect.MPDatepicker('value').from + " to: " + dateSelect.MPDatepicker('value').to);
       var eventGraph  = $('#graph').MPChart({chartType: 'line'});
       var eventTable  = $('#table').MPTable({
         showPercentages: true,
@@ -45,6 +51,12 @@
       });
       propSelect.on('change', runQuery);
       dateSelect.on('change', runQuery);
+     
+
+    
+      
+      
+      
     </script>
   </body>
 </html>
