@@ -21,7 +21,7 @@
       var propSelect  = $('#propSelect').MPPropertySelect();
       var to = new Date(); 
       var from = new Date(); 
-      from = from - 7;
+      from.setDate(from - 7);
       console.log("this is the from date" + from)
       var dateSelect  = $('#dateSelect').MPDatepicker();
       $('#dateSelect').val([{from: from, to: to}]);
