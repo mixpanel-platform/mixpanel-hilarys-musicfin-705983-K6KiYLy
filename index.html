@@ -19,13 +19,13 @@
     <script>
       var eventSelect = $('#eventSelect').MPEventSelect();
       var propSelect  = $('#propSelect').MPPropertySelect();
+
       var dateSelect  = $('#dateSelect').MPDatepicker();
+      fromDate = new Date()
+      fromDate.setDate(dateSelectTime.to.getDate() - 7)
       dateSelectTime = dateSelect.val()
-      fromDate = new Date(dateSelectTime.to)
-      fromDate.setDate(fromDate.getDate() - 7)
       dateSelectTime.from = fromDate
       dateSelect.val(dateSelectTime)
-      
       
       
       var eventGraph  = $('#graph').MPChart({chartType: 'line'});
